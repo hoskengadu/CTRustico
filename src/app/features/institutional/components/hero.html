@@ -1,0 +1,47 @@
+<section class="hero container" id="inicio" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="red-line"></span>{{ hero().eyebrow }}</p>
+    <h1 id="hero-title">
+      <span class="sr-only">CT Rústico BJJ. </span>{{ hero().title }}<br /><em>{{
+        hero().emphasis
+      }}</em>
+    </h1>
+    <p class="hero-description">{{ hero().description }}</p>
+    <div class="actions">
+      <a class="button" routerLink="/" fragment="contato"
+        >Quero uma aula experimental <span aria-hidden="true">↗</span></a
+      ><a class="button button-outline" routerLink="/" fragment="horarios"
+        >Consultar horários <span aria-hidden="true">↓</span></a
+      >
+    </div>
+    <p class="hero-note"><span aria-hidden="true">●</span> JIU-JÍTSU · UM TREINO DE CADA VEZ</p>
+  </div>
+  <div class="hero-art">
+    @if (hero().photo; as photo) {
+      <img
+        class="hero-photo"
+        [src]="photo.src"
+        [alt]="photo.alt"
+        [width]="photo.width"
+        [height]="photo.height"
+        fetchpriority="high"
+      />
+    } @else {
+      <div class="brand-stage">
+        <p class="stage-label">CT RÚSTICO · BRAZILIAN JIU-JITSU</p>
+        <div class="emblem-frame">
+          <img
+            class="hero-logo"
+            [src]="brand.logo.src"
+            [alt]="brand.logo.alt"
+            [width]="brand.logo.width"
+            [height]="brand.logo.height"
+            fetchpriority="high"
+          />
+        </div>
+        <p class="stage-motto">{{ brand.slogan }}</p>
+        <span class="stage-stripe" aria-hidden="true"></span>
+      </div>
+    }
+  </div>
+</section>

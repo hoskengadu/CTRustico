@@ -1,0 +1,150 @@
+@use '../../../../styles/tokens' as t;
+.hero {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  gap: 40px;
+  padding-block: 76px 60px;
+  align-items: center;
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+.hero h1 {
+  margin-bottom: 26px;
+}
+.hero .eyebrow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.64rem;
+}
+.red-line {
+  width: 28px;
+  height: 2px;
+  background: var(--red-light);
+}
+.hero-description {
+  color: var(--muted);
+  max-width: 420px;
+  font-size: 0.95rem;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.hero-note {
+  margin: 32px 0 0;
+  color: var(--muted);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+}
+.hero-note span {
+  color: var(--red-light);
+  margin-right: 8px;
+}
+.hero-art {
+  min-width: 0;
+}
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 1px solid var(--line);
+  filter: saturate(.78) contrast(1.06);
+}
+
+.brand-stage {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 32px 20px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #272727 0%, #101010 65%);
+  border: 1px solid var(--line);
+}
+.stage-label,
+.stage-motto {
+  text-align: center;
+  margin: 0;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.stage-motto {
+  color: var(--white);
+  font-weight: 700;
+  font-family: 'Brush Script MT', 'Segoe Print', cursive;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  transform: rotate(-3deg);
+}
+.emblem-frame {
+  width: min(72%, 280px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid #737373;
+  border-radius: 50%;
+  position: relative;
+  box-shadow:
+    0 0 0 8px #101010,
+    0 0 0 9px #383838;
+}
+.emblem-frame::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border: 3px solid transparent;
+  border-right-color: var(--red);
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+.hero-logo {
+  width: 200px;
+  max-width: 84%;
+  height: auto;
+  border-radius: 50%;
+}
+.stage-stripe {
+  height: 6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ededed 0 65%, var(--red) 65% 85%, #333 85%);
+}
+@media (max-width: t.$tablet) {
+  .hero {
+    gap: 24px;
+    padding-top: 48px;
+  }
+  .hero .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: t.$mobile) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-block: 44px;
+    gap: 32px;
+  }
+  .hero .actions {
+    align-items: stretch;
+  }
+  .hero-art {
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+  }
+}

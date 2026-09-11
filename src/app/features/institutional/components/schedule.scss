@@ -1,0 +1,67 @@
+.schedule-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 24px;
+}
+.schedule-group {
+  min-width: 0;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--red);
+}
+.adult-group {
+  grid-column: 1 / -1;
+}
+.schedule-group h3 {
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 16px;
+}
+.training {
+  min-width: 0;
+  padding: 20px;
+  background: var(--black);
+  border: 1px solid var(--line);
+}
+h4 {
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.training-time {
+  font-size: 2rem;
+  color: var(--red-light);
+  font-weight: 700;
+  margin: 16px 0;
+}
+.unconfirmed {
+  color: var(--muted);
+  margin: 16px 0;
+  font-weight: 700;
+}
+dl {
+  margin: 0;
+}
+dl div + div {
+  margin-top: 16px;
+}
+dt {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+dd {
+  margin: 4px 0 0;
+  overflow-wrap: anywhere;
+}
+.schedule-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 24px 0 0;
+}
