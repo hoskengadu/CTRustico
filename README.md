@@ -108,7 +108,9 @@ public/                     # Logo fornecida, favicon, 404 e arquivos SEO gerado
 
 Atualize `src/app/core/config/brand.ts` e `src/app/features/institutional/data/institutional.data.ts`. Não distribua os dados do CT pelos templates.
 
-Pendentes: versão da logo em alta resolução/vetor e manual de marca; autorização e arquivos das fotos; história, missão e cultura; validação da proposta de valores/frases; nomes, fotos, graduações e apresentações dos professores; níveis e faixas etárias exatas; horário do treino aberto de sexta; endereço e link de mapa; telefone/WhatsApp; condições da aula experimental; domínio real.
+Pendentes: versão da logo em alta resolução/vetor e manual de marca; autorização e arquivos das fotos; história, missão e cultura; validação da proposta de valores/frases; nomes, fotos, graduações e apresentações dos professores; níveis e faixas etárias exatas; horário do treino aberto de sexta; link de mapa; condições da aula experimental; domínio real.
+
+WhatsApp confirmado: `+55 21 97032-5614`. O CTA abre uma conversa pré-preenchida para solicitar informações sobre o CT.
 
 O quadro enviado pelo usuário foi transcrito para `src/app/features/institutional/data/schedule.data.ts`: Adultos segunda/quarta às 08:00, segunda/quarta/quinta às 17:00 e 20:15, terça No Gi às 17:00; sexta treino aberto (hora não informada); Kids 1 e 2 segunda/quarta às 18:15; Juvenil segunda/quarta às 19:15. O componente agrupa por turma e representa a hora desconhecida como `null`. Não foram inferidos horários de término, professores ou idades. A captura de tela não é publicada como imagem, pois contém elementos de interface alheios ao quadro.
 

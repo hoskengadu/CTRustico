@@ -56,10 +56,10 @@ test('página sem erros, navegação e menu por teclado', async ({ page, isMobil
       'aria-expanded',
       'false',
     );
-  await page.getByRole('link', { name: 'Solicitar aula pelo Instagram' }).scrollIntoViewIfNeeded();
-  await expect(page.getByRole('link', { name: 'Solicitar aula pelo Instagram' })).toHaveAttribute(
+  await page.getByRole('link', { name: 'Falar pelo WhatsApp' }).scrollIntoViewIfNeeded();
+  await expect(page.getByRole('link', { name: 'Falar pelo WhatsApp' })).toHaveAttribute(
     'href',
-    'https://www.instagram.com/ctrusticobjj/',
+    /https:\/\/wa\.me\/5521970325614/,
   );
   expect(errors).toEqual([]);
 });

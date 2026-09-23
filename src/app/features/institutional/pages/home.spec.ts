@@ -8,16 +8,17 @@ describe('Conteúdo institucional', () => {
     const fixture = TestBed.createComponent(Home);
     await fixture.whenStable();
     const page = fixture.nativeElement as HTMLElement;
-    for (const message of [
-      INSTITUTIONAL_DATA.pending.history,
-      INSTITUTIONAL_DATA.pending.teachers,
-      INSTITUTIONAL_DATA.pending.gallery,
-      INSTITUTIONAL_DATA.pending.address,
-    ])
+    for (const message of [INSTITUTIONAL_DATA.pending.history, INSTITUTIONAL_DATA.pending.gallery])
       expect(page.textContent).toContain(message);
-    expect(page.querySelector('.teacher')).toBeNull();
+    expect(page.querySelectorAll('.teacher')).toHaveLength(3);
+    expect(page.textContent).toContain('Vitão');
+    expect(page.textContent).toContain('Santos');
+    expect(page.textContent).toContain('Caio');
+    expect(page.textContent).toContain('Praia Belo Jardim, 619');
+    expect(page.textContent).toContain('+55 21 97032-5614');
+    expect(page.querySelector('a[href^="https://wa.me/5521970325614"]')).not.toBeNull();
     expect(page.querySelector('.hero-photo')?.getAttribute('src')).toBe(
-      '/images/ct-pitbull-mural.png',
+      '/images/ct-pitbull-mural.jpeg',
     );
     expect(page.querySelector('.gallery img')).toBeNull();
   });

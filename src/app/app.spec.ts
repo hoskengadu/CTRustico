@@ -17,12 +17,12 @@ describe('Página institucional e navegação', () => {
     expect(page.querySelector('a[href="/#conteudo"]')).not.toBeNull();
     expect(page.querySelector('a[href="' + BRAND.instagram + '"]')).not.toBeNull();
     expect(page.textContent).not.toContain('Hello,');
-    expect(page.querySelectorAll('img')).toHaveLength(3);
+    expect(page.querySelectorAll('img')).toHaveLength(6);
     expect(page.querySelectorAll('img[src="' + BRAND.logo.src + '"]')).toHaveLength(2);
     expect(page.querySelector('img.hero-photo')?.getAttribute('src')).toBe(
-      '/images/ct-pitbull-mural.png',
+      '/images/ct-pitbull-mural.jpeg',
     );
-    expect(page.querySelector('a[href^="tel:"]')).toBeNull();
+    expect(page.querySelector('a[href="tel:+55 21 97032-5614"]')).not.toBeNull();
   });
   it('mostra página de erro para rota desconhecida', async () => {
     const harness = await RouterTestingHarness.create('/nao-existe');

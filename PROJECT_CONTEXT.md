@@ -38,7 +38,9 @@ Tentativa de leitura do Instagram em 10/09/2026 não retornou conteúdo. Nenhum 
 
 ## Pendências de conteúdo
 
-Versão da logo em alta resolução/vetor e manual de marca; fotos autorizadas; história/missão/cultura; validação de valores e frases; professores e graduações; níveis e idades exatas; horário do treino aberto de sexta; endereço/mapa; telefone/WhatsApp; regras da aula experimental; domínio de produção.
+Versão da logo em alta resolução/vetor e manual de marca; fotos autorizadas; história/missão/cultura; validação de valores e frases; professores e graduações; níveis e idades exatas; horário do treino aberto de sexta; link de mapa; telefone/WhatsApp; regras da aula experimental; domínio de produção.
+
+Endereço confirmado pelo usuário: Praia Belo Jardim, 619 — Ilha do Governador — RJ. WhatsApp confirmado: +55 21 97032-5614. O CTA abre `wa.me` com mensagem pré-preenchida; mapa continua pendente.
 
 ## Quadro de horários fornecido
 

@@ -7,9 +7,9 @@ export const INSTITUTIONAL_DATA: InstitutionalContent = {
     title: 'Não tememos',
     emphasis: 'a guerra.',
     description:
-      'Mais que um esporte: uma escola para a vida. Conheça o CT Rústico BJJ e fale com a equipe sobre como começar.',
+      'Conheça o CT Rústico BJJ e fale com a equipe sobre como começar.',
     photo: {
-      src: '/images/ct-pitbull-mural.png',
+      src: '/images/ct-pitbull-mural.jpeg',
       alt: 'Desenho mural do CT Rústico BJJ com um pitbull de kimono',
       width: 768,
       height: 1024,
@@ -33,13 +33,59 @@ export const INSTITUTIONAL_DATA: InstitutionalContent = {
       description: 'O caminho é individual. O aprendizado se constrói junto.',
     },
   ],
-  teachers: [],
+  teachers: [
+    {
+      id: 'vitao',
+      name: 'Vitão',
+      rank: 'Mestre',
+      role: 'Professor',
+      bio: 'Professor do CT Rústico BJJ.',
+      photo: {
+        src: '/images/teachers/vitao.jpeg',
+        alt: 'Vitão usando kimono azul no CT Rústico BJJ',
+        width: 1200,
+        height: 1600,
+      },
+    },
+    {
+      id: 'santos',
+      name: 'Santos',
+      rank: 'Mestre',
+      role: 'Professor',
+      bio: 'Professor do CT Rústico BJJ.',
+      photo: {
+        src: '/images/teachers/santos.jpeg',
+        alt: 'Santos usando kimono preto no CT Rústico BJJ',
+        width: 960,
+        height: 1280,
+      },
+    },
+    {
+      id: 'caio',
+      name: 'Caio',
+      rank: 'Mestre',
+      role: 'Professor',
+      bio: 'Professor do CT Rústico BJJ.',
+      photo: {
+        src: '/images/teachers/caio.jpeg',
+        alt: 'Caio usando kimono azul no CT Rústico BJJ',
+        width: 960,
+        height: 1280,
+      },
+    },
+  ],
   schedule: TRAINING_SCHEDULE,
   scheduleNote:
     'Sexta-feira: treino aberto para adultos, sem horário informado no quadro. Confirme com a equipe antes de ir.',
   gallery: [],
   modalities: ['Adultos · Jiu-jítsu e No Gi', 'Kids 1 e 2 · Jiu-jítsu', 'Juvenil · Jiu-jítsu'],
-  contact: { address: null, mapUrl: null, phone: null, whatsappUrl: null },
+  contact: {
+    address: 'Praia Belo Jardim, 619 — Ilha do Governador — RJ',
+    mapUrl: null,
+    phone: '+55 21 97032-5614',
+    whatsappUrl:
+      'https://wa.me/5521970325614?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20CT%20R%C3%BAstico%20BJJ.',
+  },
   pending: {
     history:
       'A história, a missão e a cultura oficial do CT serão compartilhadas aqui após confirmação da equipe.',
