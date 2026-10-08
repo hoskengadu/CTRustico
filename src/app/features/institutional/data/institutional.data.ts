@@ -15,7 +15,34 @@ export const INSTITUTIONAL_DATA: InstitutionalContent = {
       height: 1024,
     },
   },
-  history: null,
+  history: `O CT RÚSTICO nasceu da vontade de fazer diferente. Da vontade de construir um lugar onde o Jiu-Jitsu fosse muito além de uma arte marcial — um lugar onde pessoas pudessem evoluir, criar laços, superar seus próprios limites e se tornar melhores dentro e fora dos tatames.
+
+E foi assim que, Caio Henrique, Alberto Santos e Vitor Ripper, três amigos que se conheceram no tatame, começaram a transformar um sonho em realidade.
+
+O que começou com conversas, ideias e a vontade de construir algo juntos ganhou forma, ganhou um nome e, principalmente, ganhou uma família.
+
+Assim nasceu o CT RÚSTICO.
+
+Localizado no coração do Galeão, o Rústico rapidamente se tornou muito mais do que uma academia. É um espaço onde crianças aprendem disciplina e respeito, onde jovens descobrem sua força e onde adultos encontram no Jiu-Jitsu um caminho de evolução.
+
+Em pouco mais de um ano de existência, os resultados já mostram que o sonho deu certo. Atletas formados dentro do Rústico vêm conquistando resultados expressivos em competições, levando o nome da equipe cada vez mais longe.
+
+Mas, para nós, resultado não se mede apenas por medalhas.
+
+Resultado é ver um aluno superar seus medos.
+É ver uma criança crescer com disciplina.
+É ver um atleta acreditar novamente em si mesmo.
+É ver amizades nascerem no tatame e permanecerem para a vida.
+
+O CT RÚSTICO forma atletas para os tatames e, acima de tudo, pessoas para a vida.
+
+Porque três amigos se encontraram no tatame, tiveram um sonho e decidiram lutar por ele.
+
+E essa história está apenas começando.
+
+CT RÚSTICO BJJ — mais que um tatame, uma família.
+
+OSS! 🥋🔥`,
   mission: null,
   culture: null,
   values: [

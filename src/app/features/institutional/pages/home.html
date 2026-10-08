@@ -1,7 +1,7 @@
 <app-hero [hero]="content.hero" />
 <div class="principles-strip" aria-hidden="true">
   <div class="container">
-    <span>LEALDADE</span><span>✳</span><span>DISCIPLINA</span><span>✳</span
+    <span>LEALDADE</span><span>✳</span><span>CORAGEM</span><span>✳</span
     ><span>HUMILDADE</span>
   </div>
 </div>
@@ -12,8 +12,10 @@
       <h2 id="essencia-title">Raiz forte.<br />Caminho <em>aberto.</em></h2>
     </div>
     <div class="intro-copy">
-      <p class="status">HISTÓRIA EM CONSTRUÇÃO NESTE SITE</p>
-      <p>{{ content.history ?? content.pending.history }}</p>
+      <p class="status">TODA GRANDE HISTÓRIA COMEÇA COM UM SONHO.</p>
+      @for (paragraph of (content.history ?? content.pending.history).split('\n\n'); track $index) {
+        <p class="history-paragraph">{{ paragraph }}</p>
+      }
       @if (content.mission) {
         <h3>Missão</h3>
         <p>{{ content.mission }}</p>
