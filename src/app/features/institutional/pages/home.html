@@ -105,9 +105,13 @@
       >
     </div>
     @if (content.gallery.length) {
-      <div class="gallery">
-        @for (photo of content.gallery; track photo.src) {
-          <figure>
+      <div id="ct-gallery" class="gallery" role="region" aria-roledescription="carrossel" aria-label="Fotos do CT Rústico"
+        (mouseenter)="setGalleryHovered(true)" (mouseleave)="setGalleryHovered(false)"
+        (focusin)="setGalleryFocused($event)" (focusout)="setGalleryFocused($event)">
+        <div class="gallery-stage">
+        @for (photo of content.gallery; track photo.src; let index = $index) {
+          <figure [hidden]="activePhoto() !== index" role="group" aria-roledescription="slide"
+            [attr.aria-label]="'Foto ' + (index + 1) + ' de ' + content.gallery.length">
             <img
               [src]="photo.src"
               [alt]="photo.alt"
@@ -118,6 +122,25 @@
             />
           </figure>
         }
+        @if (content.gallery.length > 1) {
+          <button class="gallery-arrow gallery-prev" type="button" aria-label="Foto anterior" (click)="changePhoto(-1)">‹</button>
+          <button class="gallery-arrow gallery-next" type="button" aria-label="Próxima foto" (click)="changePhoto(1)">›</button>
+        }
+        </div>
+        <div class="gallery-controls">
+          <span class="gallery-count">{{ activePhoto() + 1 }} / {{ content.gallery.length }}</span>
+          <div class="gallery-dots" aria-label="Escolher foto">
+            @for (photo of content.gallery; track photo.src; let index = $index) {
+              <button type="button" [class.active]="activePhoto() === index"
+                [attr.aria-label]="'Ver foto ' + (index + 1)" [attr.aria-current]="activePhoto() === index ? 'true' : null"
+                (click)="activePhoto.set(index)"><span></span></button>
+            }
+          </div>
+          @if (content.gallery.length > 1) {
+            <button class="gallery-pause" type="button" [attr.aria-label]="galleryPaused() ? 'Iniciar troca automática' : 'Pausar troca automática'"
+              (click)="galleryPaused.set(!galleryPaused())">{{ galleryPaused() ? '▶' : 'Ⅱ' }}</button>
+          }
+        </div>
       </div>
     } @else {
       <div class="gallery-pending">
