@@ -130,8 +130,7 @@
   font-size: 4rem;
   color: var(--red-light);
 }
-.teacher-grid,
-.gallery {
+.teacher-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -146,12 +145,16 @@
   color: var(--muted);
 }
 .gallery figure {
-  margin: 0;
+  margin: 0 0 24px;
+  break-inside: avoid;
+}
+.gallery {
+  columns: 3;
+  column-gap: 24px;
 }
 .gallery img {
   width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  height: auto;
 }
 .gallery-pending {
   display: grid;
@@ -211,6 +214,9 @@
   font-size: 0.75rem;
 }
 @media (max-width: t.$tablet) {
+  .gallery {
+    columns: 2;
+  }
   .section-intro {
     grid-template-columns: 1fr;
   }
@@ -275,9 +281,11 @@
   .pending-row {
     gap: 20px;
   }
-  .teacher-grid,
-  .gallery {
+  .teacher-grid {
     grid-template-columns: 1fr;
+  }
+  .gallery {
+    columns: 1;
   }
   .gallery-pending {
     grid-template-columns: 1fr;

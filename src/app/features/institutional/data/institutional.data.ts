@@ -104,7 +104,17 @@ OSS! 🥋🔥`,
   schedule: TRAINING_SCHEDULE,
   scheduleNote:
     'Sexta-feira: treino aberto para adultos, sem horário informado no quadro. Confirme com a equipe antes de ir.',
-  gallery: [],
+  gallery: [
+    { src: '/images/gallery/podio-campeonato.jpeg', alt: 'Atletas no pódio de um campeonato de Jiu-Jitsu', width: 960, height: 1280 },
+    { src: '/images/gallery/equipe-certificado.jpeg', alt: 'Integrantes da equipe reunidos no tatame com um certificado', width: 720, height: 1280 },
+    { src: '/images/gallery/equipe-tatame.jpeg', alt: 'Quatro integrantes da equipe de kimono no CT Rústico', width: 720, height: 1280 },
+    { src: '/images/gallery/treino-tecnica.jpeg', alt: 'Prática de uma técnica de Jiu-Jitsu no tatame', width: 1280, height: 960 },
+    { src: '/images/gallery/atleta-medalha.jpeg', alt: 'Atleta de kimono branco com medalha ao lado de um colega', width: 960, height: 1280 },
+    { src: '/images/gallery/equipe-graduacao.jpeg', alt: 'Equipe reunida no CT Rústico com aluno segurando um certificado', width: 960, height: 1280 },
+    { src: '/images/gallery/treino-academia.jpeg', alt: 'Alunos treinando no tatame do CT Rústico ao entardecer', width: 1280, height: 960 },
+    { src: '/images/gallery/alunos-tatame.jpeg', alt: 'Alunos de kimono sentados juntos no tatame', width: 720, height: 1280 },
+    { src: '/images/gallery/luta-competicao.jpeg', alt: 'Atletas de kimono azul e branco durante uma luta de Jiu-Jitsu', width: 853, height: 1280 },
+  ],
   modalities: ['Adultos · Jiu-jítsu e No Gi', 'Kids 1 e 2 · Jiu-jítsu', 'Juvenil · Jiu-jítsu'],
   contact: {
     address: 'Praia Belo Jardim, 619 — Ilha do Governador — RJ',
