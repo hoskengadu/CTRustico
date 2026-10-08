@@ -7,12 +7,12 @@
 </div>
 <section id="essencia" class="section container" aria-labelledby="essencia-title">
   <div class="section-intro">
-    <div>
+    <div class="history-heading">
       <p class="eyebrow">01 / ESSÊNCIA</p>
       <h2 id="essencia-title">Raiz forte.<br />Caminho <em>aberto.</em></h2>
     </div>
     <div class="intro-copy">
-      <p class="status">TODA GRANDE HISTÓRIA COMEÇA COM UM SONHO.</p>
+      <h3 class="history-title">TODA GRANDE HISTÓRIA COMEÇA COM UM SONHO.</h3>
       @for (paragraph of (content.history ?? content.pending.history).split('\n\n'); track $index) {
         <p class="history-paragraph">{{ paragraph }}</p>
       }

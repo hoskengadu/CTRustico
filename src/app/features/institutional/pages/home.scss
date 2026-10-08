@@ -27,12 +27,43 @@
   max-width: 440px;
   color: var(--muted);
 }
+.section-intro {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: clamp(40px, 5vw, 80px);
+}
+.section-intro > .intro-copy {
+  width: 100%;
+  max-width: 680px;
+}
+.history-heading h2 {
+  overflow-wrap: normal;
+  font-size: clamp(2.8rem, 4vw, 4.4rem);
+}
+.history-title {
+  max-width: 22ch;
+  margin: 0 0 32px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
 .intro-copy p:last-child,
 .heading-description p {
   margin-bottom: 0;
 }
 .history-paragraph {
   white-space: pre-line;
+  margin-bottom: 24px;
+  line-height: 1.85;
+}
+.history-paragraph:nth-last-child(2) {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--white);
+  font-weight: 700;
 }
 .heading-description h3 {
   font-size: 0.9rem;
@@ -180,6 +211,9 @@
   font-size: 0.75rem;
 }
 @media (max-width: t.$tablet) {
+  .section-intro {
+    grid-template-columns: 1fr;
+  }
   .section-intro,
   .section-heading {
     gap: 32px;
@@ -197,6 +231,12 @@
   }
 }
 @media (max-width: t.$mobile) {
+  .section-intro {
+    gap: 32px;
+  }
+  .history-title {
+    margin-bottom: 24px;
+  }
   .principles-strip .container {
     font-size: 0.5rem;
     flex-wrap: wrap;
